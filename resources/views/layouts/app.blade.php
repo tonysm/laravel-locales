@@ -17,7 +17,7 @@
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
-            'locale' => app()->getLocale(),
+            'locale' => trans()->getLocale(),
         ]) !!};
     </script>
 </head>

@@ -4,7 +4,6 @@ namespace App\Http\Middleware;
 
 use Carbon\Carbon;
 use Closure;
-use Illuminate\Support\Facades\Lang;
 
 class HandlesLocale
 {
@@ -19,7 +18,7 @@ class HandlesLocale
     {
         $locale = $this->detectLocale($request);
 
-        Lang::setLocale($locale);
+        trans()->setLocale($locale);
         Carbon::setLocale($locale);
 
         return $next($request);
@@ -34,6 +33,10 @@ class HandlesLocale
     {
         if ($user = $request->user()) {
             return $user->locale() ?: $this->detectHttpLanguage($request);
+        }
+
+        if ($request->session()->has('locale')) {
+            return $request->session()->get('locale');
         }
 
         return $this->detectHttpLanguage($request);
