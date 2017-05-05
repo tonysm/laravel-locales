@@ -20,3 +20,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('articles/{article}', 'ArticlesController@show')->name('articles.show');
 Route::post('articles/{article}/comments', 'ArticleCommentsController@store')->name('articles.comments.store');
+Route::put('locales', 'LocalesController@update')->name('locales');
