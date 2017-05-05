@@ -18,3 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('articles/{article}', 'ArticlesController@show')->name('articles.show');
+Route::post('articles/{article}/comments', 'ArticleCommentsController@store')->name('articles.comments.store');

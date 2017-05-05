@@ -4,13 +4,27 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+            @foreach ($articles as $article)
+                <div class="panel panel-default">
+                    <div class="panel-heading clearfix">
+                        <div class="pull-left">
+                            <a href="{{ route('articles.show', $article) }}">
+                                {{ $article->title }}
+                            </a>
+                        </div>
 
-                <div class="panel-body">
-                    You are logged in!
+                        <div class="pull-right">
+                            {{ trans_choice('app.articles.comments', $article->comments_count, ['count' => $article->comments_count]) }}
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+                        {{ $article->body }}
+                    </div>
                 </div>
-            </div>
+            @endforeach
+
+            {{ $articles->links() }}
         </div>
     </div>
 </div>
