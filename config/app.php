@@ -94,6 +94,21 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Application Available Locales
+    |--------------------------------------------------------------------------
+    |
+    | Here we can define all the available locales that our application is
+    | going to support. We are using 2 chars for now, we won't care about
+    | ISO or anything yet, just making it work is fine for me.
+    |
+    */
+    'locales' => [
+        'en',
+        'pt',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Encryption Key
     |--------------------------------------------------------------------------
     |
