@@ -11,7 +11,6 @@ return [
         'register' => 'Register',
         'login_title' => 'Login',
         'forgot_password_question' => 'Forgot your password?',
-        'forgot_password_title' => '',
         'remember_me' => 'Remember me',
         'login_btn' => 'Login',
         'register_btn' => 'Register',
