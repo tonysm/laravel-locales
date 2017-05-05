@@ -1696,6 +1696,7 @@ window.axios = __webpack_require__(10);
 
 window.axios.defaults.headers.common['X-CSRF-TOKEN'] = window.Laravel.csrfToken;
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.headers.common['Accept-Language'] = window.Laravel.locale;
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
