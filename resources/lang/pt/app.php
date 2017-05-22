@@ -18,6 +18,8 @@ return [
         'reset_password_title' => 'Mudar Senha',
         'reset_password_link_btn' => 'Solicitação mudança de senha',
         'reset_password_btn' => 'Mudar senha',
+        'reset_password' => 'Você está recebendo este email porque solicitou a mudança de senha.',
+        'reset_password_ignore' => 'Caso não tenha solicitado, nenhum ação é necessária.',
     ],
     'articles' => [
         'comments' => '{0} Nenhum comentário|{1} :count comentário|[2,*] :count comentários',
